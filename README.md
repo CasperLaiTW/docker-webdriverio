@@ -22,7 +22,7 @@ services:
   firefox:
     image: selenium/node-firefox
     ports:
-      - 5900
+      - 5900:5900 # if you want to debug
     environment:
       - HUB_PORT_4444_TCP_ADDR=hub
       - HUB_PORT_4444_TCP_PORT=4444
@@ -32,7 +32,7 @@ services:
   chrome:
     image: selenium/node-chrome
     ports:
-      - 5900
+      - 5901:5900  # if you want to debug
     environment:
       - HUB_PORT_4444_TCP_ADDR=hub
       - HUB_PORT_4444_TCP_PORT=4444
