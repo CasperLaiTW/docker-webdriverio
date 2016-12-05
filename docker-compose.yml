@@ -2,6 +2,8 @@ version: '2'
 services:
   e2e:
     image: casperlai/docker-webdriverio:latest
+    volumns:
+      - ./:/app
     depends_on:
       - chrome
       - firefox
