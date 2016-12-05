@@ -4,8 +4,6 @@ services:
     image: casperlai/docker-webdriverio:latest
     container_name: e2e
     tty: true
-    ports:
-      - 80
     volumes:
       - ./:/app
     depends_on:
