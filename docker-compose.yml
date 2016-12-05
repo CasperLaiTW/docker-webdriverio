@@ -2,6 +2,10 @@ version: '2'
 services:
   e2e:
     image: casperlai/docker-webdriverio:latest
+    container_name: e2e
+    tty: true
+    ports:
+      - 80
     volumes:
       - ./:/app
     depends_on:
@@ -15,7 +19,7 @@ services:
     container_name: hub
 
   firefox:
-    image: selenium/node-firefox
+    image: selenium/node-firefox-debug
     ports:
       - 5901:5900
     environment:
@@ -25,7 +29,7 @@ services:
       - hub
 
   chrome:
-    image: selenium/node-chrome
+    image: selenium/node-chrome-debug
     ports:
       - 5900:5900
     environment:
