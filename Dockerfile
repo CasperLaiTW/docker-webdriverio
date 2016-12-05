@@ -12,7 +12,3 @@ RUN  wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cooki
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN npm install yarn -g
-
-VOLUME /app
-WORKDIR /app
-RUN yarn install
